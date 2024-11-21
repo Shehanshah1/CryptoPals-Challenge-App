@@ -63,28 +63,55 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\Page3.xaml">
+	  <Compile Update="Pages\Challenge1.xaml.cs">
+	    <DependentUpon>Challenge1.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Challenge2.xaml.cs">
+	    <DependentUpon>Challenge2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Challenge3.xaml.cs">
+	    <DependentUpon>Challenge3.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Challenge4.xaml.cs">
+	    <DependentUpon>Challenge4.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Challenge5.xaml.cs">
+	    <DependentUpon>Challenge5.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Challenge6.xaml.cs">
+	    <DependentUpon>Challenge6.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Challenge7.xaml.cs">
+	    <DependentUpon>Challenge7.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Challenge8.xaml.cs">
+	    <DependentUpon>Challenge8.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Challenge2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Page4.xaml">
+	  <MauiXaml Update="Pages\Challenge3.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Page5.xaml">
+	  <MauiXaml Update="Pages\Challenge4.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Page6.xaml">
+	  <MauiXaml Update="Pages\Challenge5.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Page7.xaml">
+	  <MauiXaml Update="Pages\Challenge6.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Page8.xaml">
+	  <MauiXaml Update="Pages\Challenge7.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Page9.xaml">
+	  <MauiXaml Update="Pages\Challenge8.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Page2.xaml">
+	  <MauiXaml Update="Pages\Challenge1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

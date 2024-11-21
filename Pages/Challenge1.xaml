@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Challenge1"
+             Title=""
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10"
+            Margin="10"
+            Padding="5"
+            VerticalOptions="Start">
+
+            <!-- Description for Challenge #-->
+            <Label
+                Text="CHALLENGE 1"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Header"
+                Margin="10" />
+
+            <!-- Name of the Challenge-->
+            <Label
+                Text="Convert HEX to Base64"
+                HorizontalOptions="Center"
+                FontSize="Medium" />
+
+            <!-- Description of the challenge-->
+            <Label
+                Text="This page converts HEX encoded string into Base 64."
+                HorizontalOptions="Center"
+                FontSize="Medium" />
+
+            <!-- Instructions for textbox entry-->
+            <Label
+                Text="Clicking the SOLVE Button would change the code from HEX to Base 64:"
+                HorizontalOptions="Center"
+                FontSize="18"
+                Margin="20" />
+
+            <!-- Entry box for string-->
+            <Entry
+                x:Name="EntryBox"
+                Text="49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
+                Placeholder="Enter HEX string"
+                PlaceholderColor="Gray"
+                WidthRequest="770"
+                HorizontalOptions="Center" />
+
+            <!-- Solve Button-->
+            <Button
+                Text="Solve"
+                Margin="10"
+                HorizontalOptions="Center"
+                WidthRequest="150"
+                Clicked="OnSolveButtonClicked"
+                FontSize="Medium" />
+
+            <!-- Answer label-->
+            <Label
+                x:Name="AnswerLabel"
+                Text=""
+                Margin="10"
+                HorizontalOptions="Center"
+                FontSize="Large" />
+
+            <!-- Grid box for "previous" and "next" challenges-->
+            <Grid ColumnDefinitions="*,*">
+                <Button
+                    Text="Back"
+                    Clicked="OnBackButtonClicked"
+                    HorizontalOptions="End"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="Small"
+                    HeightRequest="60"
+                    Grid.Column="0" />
+
+                <Button
+                    Text="Next"
+                    Clicked="OnNextButtonClicked"
+                    HorizontalOptions="Start"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="20"
+                    Grid.Column="1"
+                    HeightRequest="60" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

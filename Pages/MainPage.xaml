@@ -45,9 +45,9 @@
 
             <Button
                 Text="Start"
-                Clicked="Start"
                 MaximumWidthRequest="200"
                 FontSize="20"
+                Clicked="OnStartButtonClicked"
                 />
 
 

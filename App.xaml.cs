@@ -1,4 +1,6 @@
-﻿namespace MauiApp1
+﻿
+namespace MauiApp1
+
 {
     public partial class App : Application
     {
@@ -6,7 +8,26 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            // Setting up the initial page to LoginView using a NavigationPage
+            MainPage = new NavigationPage(new MainPage());
+        }
+
+        // A helper method to simplify navigation
+        public static async Task NavigateToPage(Page page)
+        {
+            if (Current.MainPage is NavigationPage navigationPage)
+            {
+                await navigationPage.PushAsync(page);
+            }
+        }
+
+        // A helper method for navigating back
+        public static async Task GoBack()
+        {
+            if (Current.MainPage is NavigationPage navigationPage)
+            {
+                await navigationPage.PopAsync();
+            }
         }
     }
 }

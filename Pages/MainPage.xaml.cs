@@ -9,15 +9,10 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked (object sender, EventArgs e)
+        private async void OnStartButtonClicked(object sender, EventArgs e)
         {
-
+            await App.NavigateToPage(new Challenge1());
         }
-        private void Start(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Page2());
-        }
-        
 
     }
 

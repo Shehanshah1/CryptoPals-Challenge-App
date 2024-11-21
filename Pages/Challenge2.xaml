@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp1.Page2"
+             x:Class="MauiApp1.Page3"
              Title="Cryptopals Crypto Challenges: Challenge Set 1">
 
     <ScrollView>
         <VerticalStackLayout
-        Spacing = "25"
-        Padding = "5,5"
-        VerticalOptions="Start">
+    Spacing = "25"
+    Padding = "5,5"
+    VerticalOptions="Start">
 
 
 
@@ -16,72 +16,72 @@
             <!-- Description for Challenge #-->
             <!-- **********************************************-->
             <Label
-                Text="CHALLENGE 1"
-                HorizontalOptions= "Center"
-                Padding="5"
-                FontSize="30"
-                />
+            Text="CHALLENGE 2"
+            HorizontalOptions= "Center"
+            Padding="5"
+            FontSize="30"
+            />
 
             <!--***********************************************-->
             <!-- Name of the Challenge-->
             <!-- **********************************************-->
             <Label
-                Text="Convert HEX to Base64"
-                HorizontalOptions="Center"
-                Padding="0"
-                FontSize="25"
-                />
+            Text="Fixed XOR"
+            HorizontalOptions="Center"
+            Padding="0"
+            FontSize="25"
+            />
 
             <!--***********************************************-->
             <!-- Description of the challenge-->
             <!-- **********************************************-->
             <Label
-                Text="In this challenge our task is to use the following hex string and convert it into base64."
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="20"
-                 />
+            Text="In this challenge we were tasked with writing a function that takes two equal length buffers and produces their XOR combination. To verify the function enter the following string."
+            HorizontalOptions="Start"
+            Padding="20"
+            Margin="5"
+            FontSize="20"
+             />
 
             <!--***********************************************-->
             <!-- Description of the string -->
             <!-- **********************************************-->
             <Label
-                Text="String: 49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d "
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="16"
-                />
+            Text="String: 1c0111001f010100061a024b53535009181c "
+            HorizontalOptions="Start"
+            Padding="20"
+            Margin="5"
+            FontSize="16"
+            />
 
             <!--***********************************************-->
             <!-- instructions for textbox entry-->
             <!-- **********************************************-->
             <Label
-                Text="Please paste the previous string into the entry box below. "
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="18"
-                 />
+            Text="Please paste the previous string into the entry box below. "
+            HorizontalOptions="Start"
+            Padding="20"
+            Margin="5"
+            FontSize="18"
+             />
 
             <!--***********************************************-->
             <!-- Entry box for string-->
             <!-- **********************************************-->
             <Entry>
-                
+
             </Entry>
 
             <!--***********************************************-->
             <!-- Solution label-->
             <!-- **********************************************-->
             <Label
-                Text="Solution:  "
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="18"
-                />
+            Text="Solution:  "
+            HorizontalOptions="Start"
+            Padding="20"
+            Margin="5"
+            FontSize="18"
+            />
 
             <!--***********************************************-->
             <!-- Grid box for "previous" and "next" challenges-->
@@ -89,8 +89,8 @@
 
             <Grid>
                 <Grid.RowDefinitions>
-                    
-                   
+
+
                     <RowDefinition Height="100"/>
 
                 </Grid.RowDefinitions>
@@ -103,34 +103,32 @@
                 </Grid.ColumnDefinitions>
 
                 <Button
-                    Text="Previous Challenge"
-                    Clicked="StartMainPage"
-                    HorizontalOptions="Start"
-                    MaximumWidthRequest="250"
-                    FontSize="20"
-                    Grid.Row="0"
-                    Grid.Column="0"
-                />
+                Text="Previous Challenge"
+                Clicked="OnBackButtonClicked"
+                HorizontalOptions="Start"
+                MaximumWidthRequest="250"
+                FontSize="20"
+                Grid.Row="0"
+                Grid.Column="0"
+            />
 
                 <Button
-                    Text="Next Challenge"
-                    Clicked="StartPage3"
-                    HorizontalOptions="End"
-                    MaximumWidthRequest="200"
-                    FontSize="20"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                />
+                Text="Next Challenge"
+                Clicked="StartPage4"
+                HorizontalOptions="End"
+                MaximumWidthRequest="200"
+                FontSize="20"
+                Grid.Row="0"
+                Grid.Column="1"
+            />
 
 
             </Grid>
-            
-   
+
+
 
         </VerticalStackLayout>
-        
+
     </ScrollView>
-
-
-
+    
 </ContentPage>

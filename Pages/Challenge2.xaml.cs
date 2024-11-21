@@ -6,10 +6,9 @@ public partial class Page3 : ContentPage
 	{
 		InitializeComponent();
 	}
-    private void StartPage2(object sender, EventArgs e)
+    private async void OnBackButtonClicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Page2());
-
+        await App.NavigateToPage(new Challenge1());
     }
     private void StartPage4(object sender, EventArgs e)
     {
