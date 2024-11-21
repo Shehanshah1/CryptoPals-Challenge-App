@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp1.Page7"
+             x:Class="MauiApp1.Challenge6"
              Title="Cryptopals Crypto Challenges: Challenge Set 1">
 
     <ScrollView>
@@ -113,8 +113,8 @@
                 </Grid.ColumnDefinitions>
 
                 <Button
-                    Text="Previous Challenge"
-                    Clicked="StartPage6"
+                    Text="Back"
+                    Clicked="OnBackButtonClicked"
                     HorizontalOptions="Start"
                     MaximumWidthRequest="250"
                     FontSize="20"
@@ -123,8 +123,8 @@
                 />
 
                 <Button
-                    Text="Next Challenge"
-                    Clicked="StartPage8"
+                    Text="Next"
+                    Clicked="OnNextButtonClicked"
                     HorizontalOptions="End"
                     MaximumWidthRequest="200"
                     FontSize="20"

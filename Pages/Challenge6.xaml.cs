@@ -1,18 +1,17 @@
 namespace MauiApp1;
 
-public partial class Page7 : ContentPage
+public partial class Challenge6 : ContentPage
 {
-	public Page7()
+	public Challenge6()
 	{
 		InitializeComponent();
 	}
-    private void StartPage6(object sender, EventArgs e)
+    private async void OnBackButtonClicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Page6());
-
+        await App.GoBack();
     }
-    private void StartPage8(object sender, EventArgs e)
+    private async void OnNextButtonClicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new Page8());
+        await App.NavigateToPage(new Challenge7());
     }
 }

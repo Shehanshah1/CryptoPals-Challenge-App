@@ -19,7 +19,7 @@ namespace MauiApp1
         }
         private async void OnNextButtonClicked(object sender, EventArgs e)
         {
-            await App.NavigateToPage(new Page3());
+            await App.NavigateToPage(new Challenge2());
         }
 
         // Function to convert a hex string to a binary string
