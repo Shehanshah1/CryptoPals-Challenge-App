@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Page5"
+             Title="Cryptopals Crypto Challenges: Challenge Set 1">
+
+    <ScrollView>
+        <VerticalStackLayout
+         Spacing = "25"
+         Padding = "5,5"
+         VerticalOptions="Start">
+
+
+
+            <!--***********************************************-->
+            <!-- Description for Challenge #-->
+            <!-- **********************************************-->
+            <Label
+             Text="CHALLENGE 4"
+             HorizontalOptions= "Center"
+             Padding="5"
+             FontSize="30"
+         />
+
+            <!--***********************************************-->
+            <!-- Name of the Challenge-->
+            <!-- **********************************************-->
+            <Label
+             Text="Detect single-character XOR"
+             HorizontalOptions="Center"
+             Padding="0"
+             FontSize="25"
+         />
+
+            <!--***********************************************-->
+            <!-- Description of the challenge-->
+            <!-- **********************************************-->
+            <Label
+             Text="Description: in this challenge we were tasked with finding a 60 character string that has been encrypted by single-byte XOR from the following file."
+             HorizontalOptions="Start"
+             Padding="20"
+             Margin="5"
+             FontSize="20"
+         />
+
+            <!--***********************************************-->
+            <!-- Description of the string -->
+            <!-- **********************************************-->
+            <Label
+             Text="File:  (need to figure out how to upload file so user can access it)"
+             HorizontalOptions="Start"
+             Padding="20"
+             Margin="5"
+             FontSize="16"
+         />
+
+            <!--***********************************************-->
+            <!-- Description of the challenge-->
+            <!-- **********************************************-->
+            <Label
+             Text="In order to do this we (need more info)."
+             HorizontalOptions="Start"
+             Padding="20"
+             Margin="5"
+             FontSize="20"
+         />
+
+            <!--***********************************************-->
+            <!-- instructions for textbox entry-->
+            <!-- **********************************************-->
+            <Label
+             Text="Please paste the previous string into the entry box below. "
+             HorizontalOptions="Start"
+             Padding="20"
+             Margin="5"
+             FontSize="18"
+         />
+
+            <!--***********************************************-->
+            <!-- Entry box for string-->
+            <!-- **********************************************-->
+            <Entry>
+
+            </Entry>
+
+            <!--***********************************************-->
+            <!-- Solution label-->
+            <!-- **********************************************-->
+            <Label
+             Text="Solution:  "
+             HorizontalOptions="Start"
+             Padding="20"
+             Margin="5"
+             FontSize="18"
+         />
+
+            <!--***********************************************-->
+            <!-- Grid box for "previous" and "next" challenges-->
+            <!-- **********************************************-->
+
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="100"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button
+                     Text="Previous Challenge"
+                     Clicked="StartPage4"
+                     HorizontalOptions="Start"
+                     MaximumWidthRequest="250"
+                     FontSize="20"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                 />
+
+                <Button
+                     Text="Next Challenge"
+                     Clicked="StartPage6"
+                     HorizontalOptions="End"
+                     MaximumWidthRequest="200"
+                     FontSize="20"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                  />
+
+
+            </Grid>
+
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
+</ContentPage>

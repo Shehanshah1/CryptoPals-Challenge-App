@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Page8"
+             Title="Cryptopals Crypto Challenges: Challenge Set 1">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing = "25"
+            Padding = "5,5"
+            VerticalOptions="Start">
+
+
+
+            <!--***********************************************-->
+            <!-- Description for Challenge #-->
+            <!-- **********************************************-->
+            <Label
+                Text="CHALLENGE 7"
+                HorizontalOptions= "Center"
+                Padding="5"
+                FontSize="30"
+            />
+
+            <!--***********************************************-->
+            <!-- Name of the Challenge-->
+            <!-- **********************************************-->
+            <Label
+                Text="AES in ECB mode"
+                HorizontalOptions="Center"
+                Padding="0"
+                FontSize="25"
+            />
+
+            <!--***********************************************-->
+            <!-- Description of the challenge-->
+            <!-- **********************************************-->
+            <Label
+                Text="Description: In this challenge we are given a file with base64-encoded content thathas been encrypted via AES-128 in ECB mode under the following key."
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="20"
+            />
+
+            <!--***********************************************-->
+            <!-- Description of the string -->
+            <!-- **********************************************-->
+            <Label
+                Text="Key: 'YELLOW SUBMARINE'  "
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="16"
+            />
+
+            <!--***********************************************-->
+            <!-- Description of the challenge-->
+            <!-- **********************************************-->
+            <Label
+                Text="Note: the key is case sensitive, without qoautation marks, and exactly 16 characetrs long. Our task is to decript it. "
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="20"
+            />
+
+            <Label
+                Text="File: (need to figure out how to upload file so user can access it)"
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="16"
+            />
+
+            <!--***********************************************-->
+            <!-- instructions for textbox entry-->
+            <!-- **********************************************-->
+            <Label
+                Text="Please upload file into the entry box below. "
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="18"
+            />
+
+            <!--***********************************************-->
+            <!-- Entry box for string-->
+            <!-- **********************************************-->
+            <Entry>
+
+            </Entry>
+
+            <!--***********************************************-->
+            <!-- Solution label-->
+            <!-- **********************************************-->
+            <Label
+                Text="Solution:  "
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="18"
+             />
+
+            <!--***********************************************-->
+            <!-- Grid box for "previous" and "next" challenges-->
+            <!-- **********************************************-->
+
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="100"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Text="Previous Challenge"
+                    Clicked="StartPage7"
+                    HorizontalOptions="Start"
+                    MaximumWidthRequest="250"
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                />
+
+                <Button
+                    Text="Next Challenge"
+                    Clicked="StartPage9"
+                    HorizontalOptions="End"
+                    MaximumWidthRequest="200"
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                />
+
+
+            </Grid>
+
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

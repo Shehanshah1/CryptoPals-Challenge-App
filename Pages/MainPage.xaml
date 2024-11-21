@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+            
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing = "25"
+            Padding = "5,5"
+            VerticalOptions="Start">
+
+
+
+                <!--***********************************************-->
+                <!-- Description for Crypto Challenge App-->
+                <!-- **********************************************-->
+                <Label
+                    Text="Cryptopals Challenges are a collection of exercises that demonstrate attacks on real-world crypto, with a user interface to navigate the challenges and solutions."
+                    HorizontalOptions= "Start"
+                    Padding="5"
+                    FontSize="19"
+                    />
+
+                <!--***********************************************-->
+                <!-- Description for Challenge Set 1-->
+                <!-- **********************************************-->
+                <Label
+                    Text="Challenge set 1 specializes on qualifying. The exercises in the set are meant to ramp developers into gradually coding cryptography."
+                    VerticalOptions="Start"
+                    Padding="5"
+                    FontSize="18"
+                    />
+
+                <!--***********************************************-->
+                <!-- Instructions to click button-->
+                <!-- **********************************************-->
+                <Label
+                    Text="Click the button below to continue to Challenge 1"
+                    HorizontalOptions="Center"
+                    Margin="40"
+                    FontSize="30"
+                     />
+
+
+            <Button
+                Text="Start"
+                Clicked="Start"
+                MaximumWidthRequest="200"
+                FontSize="20"
+                />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

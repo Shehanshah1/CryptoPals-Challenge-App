@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Page9"
+             Title="Cryptopals Crypto Challenges: Challenge Set 1">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing = "25"
+            Padding = "5,5"
+            VerticalOptions="Start">
+
+
+
+            <!--***********************************************-->
+            <!-- Description for Challenge #-->
+            <!-- **********************************************-->
+            <Label
+                Text="CHALLENGE 8"
+                HorizontalOptions= "Center"
+                Padding="5"
+                FontSize="30"
+            />
+
+            <!--***********************************************-->
+            <!-- Name of the Challenge-->
+            <!-- **********************************************-->
+            <Label
+            Text="Detect AES in ECB mode"
+                HorizontalOptions="Center"
+                Padding="0"
+                FontSize="25"
+            />
+
+            <!--***********************************************-->
+            <!-- Description of the challenge-->
+            <!-- **********************************************-->
+            <Label
+                Text="Description: In this challenge we are tasked with detecting a ciphertext that had been encrypted with ECB. The ciphetexts are in the following file."
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="20"
+            />
+
+            <!--***********************************************-->
+            <!-- Description of the string -->
+            <!-- **********************************************-->
+            <Label
+                Text="File:  (need to figure out how to upload file so user can access it)"
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="16"
+            />
+
+            <!--***********************************************-->
+            <!-- Description of the challenge-->
+            <!-- **********************************************-->
+            <Label
+                Text="Note: ECB is stateless and deterministic; meaning the same 16 byte plaintext block will always produce the same 16 byte ciphertext. "
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="20"
+            />
+
+          
+
+            <!--***********************************************-->
+            <!-- instructions for textbox entry-->
+            <!-- **********************************************-->
+            <Label
+                Text="Please upload file into the entry box below. "
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="18"
+            />
+
+            <!--***********************************************-->
+            <!-- Entry box for string-->
+            <!-- **********************************************-->
+            <Entry>
+
+            </Entry>
+
+            <!--***********************************************-->
+            <!-- Solution label-->
+            <!-- **********************************************-->
+            <Label
+                Text="Solution:  "
+                HorizontalOptions="Start"
+                Padding="20"
+                Margin="5"
+                FontSize="18"
+            />
+
+            <!--***********************************************-->
+            <!-- Grid box for "previous" and "next" challenges-->
+            <!-- **********************************************-->
+
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="100"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="250"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Text="Previous Challenge"
+                    Clicked="StartPage8"
+                    HorizontalOptions="Start"
+                    MaximumWidthRequest="250"
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                />
+
+                <Button
+                    Text="Home"
+                    Clicked="StartMainPage"
+                    HorizontalOptions="End"
+                    MaximumWidthRequest="200"
+                    FontSize="20"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                />
+
+
+            </Grid>
+
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
+</ContentPage>
