@@ -24,7 +24,7 @@
             <Label
                 Text="Convert HEX to Base64"
                 HorizontalOptions="Center"
-                FontSize="Medium" />
+                FontSize="Large" />
 
             <!-- Description of the challenge-->
             <Label

@@ -2,130 +2,109 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Challenge2"
-             Title="Cryptopals Crypto Challenges: Challenge Set 1">
+             Shell.NavBarIsVisible="False"
+             >
 
     <ScrollView>
-        <VerticalStackLayout
-    Spacing = "25"
-    Padding = "5,5"
-    VerticalOptions="Start">
-
-
-
-            <!--***********************************************-->
-            <!-- Description for Challenge #-->
-            <!-- **********************************************-->
-            <Label
-            Text="CHALLENGE 2"
-            HorizontalOptions= "Center"
+        <VerticalStackLayout 
+            Spacing="10"
+            Margin="10"
             Padding="5"
-            FontSize="30"
-            />
+            VerticalOptions="Start">
 
-            <!--***********************************************-->
+            <!-- Description for Challenge #-->
+            <Label
+     Text="CHALLENGE 2"
+     FontAttributes="Bold"
+     HorizontalOptions="Center"
+     FontSize="Header"
+     Margin="10" />
+
             <!-- Name of the Challenge-->
-            <!-- **********************************************-->
             <Label
-            Text="Fixed XOR"
-            HorizontalOptions="Center"
-            Padding="0"
-            FontSize="25"
-            />
+     Text="Fixed XOR"
+     HorizontalOptions="Center"
+     FontSize="Large" />
 
-            <!--***********************************************-->
             <!-- Description of the challenge-->
-            <!-- **********************************************-->
             <Label
-            Text="In this challenge we were tasked with writing a function that takes two equal length buffers and produces their XOR combination. To verify the function enter the following string."
-            HorizontalOptions="Start"
-            Padding="20"
-            Margin="5"
-            FontSize="20"
-             />
+     Text="This page takes two equal length buffers and produces their XOR combination"
+     HorizontalOptions="Center"
+     FontSize="Medium" />
 
-            <!--***********************************************-->
-            <!-- Description of the string -->
-            <!-- **********************************************-->
+            <!-- Instructions for textbox entry-->
             <Label
-            Text="String: 1c0111001f010100061a024b53535009181c "
-            HorizontalOptions="Start"
-            Padding="20"
-            Margin="5"
-            FontSize="16"
-            />
+     Text="To verify the function enter the following string."
+     HorizontalOptions="Center"
+     FontSize="18"
+     Margin="20" />
 
-            <!--***********************************************-->
-            <!-- instructions for textbox entry-->
-            <!-- **********************************************-->
-            <Label
-            Text="Please paste the previous string into the entry box below. "
-            HorizontalOptions="Start"
-            Padding="20"
-            Margin="5"
-            FontSize="18"
-             />
+            <Grid ColumnDefinitions=".25*, .75*" RowDefinitions="60,60">
 
-            <!--***********************************************-->
-            <!-- Entry box for string-->
-            <!-- **********************************************-->
-            <Entry>
-
-            </Entry>
-
-            <!--***********************************************-->
-            <!-- Solution label-->
-            <!-- **********************************************-->
-            <Label
-            Text="Solution:  "
-            HorizontalOptions="Start"
-            Padding="20"
-            Margin="5"
-            FontSize="18"
-            />
-
-            <!--***********************************************-->
-            <!-- Grid box for "previous" and "next" challenges-->
-            <!-- **********************************************-->
-
-            <Grid>
-                <Grid.RowDefinitions>
-
-
-                    <RowDefinition Height="100"/>
-
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
-
-                </Grid.ColumnDefinitions>
-
-                <Button
-                Text="Back"
-                Clicked="OnBackButtonClicked"
-                HorizontalOptions="Start"
-                MaximumWidthRequest="250"
-                FontSize="20"
+                <Label Text="First String: " Grid.Column="0" Grid.Row="0" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
+                <!-- Entry box for first string-->
+            <Entry
+            x:Name="EntryBox1"
+            Text="1c0111001f010100061a024b53535009181c"
+            Placeholder="Enter first string"
+            PlaceholderColor="Gray"
+            WidthRequest="770"
+                VerticalOptions="Center"
+            HorizontalOptions="Center" 
                 Grid.Row="0"
-                Grid.Column="0"
-            />
+                Grid.Column="1"/>
 
-                <Button
-                Text="Next"
-                Clicked="OnNextButtonClicked"
-                HorizontalOptions="End"
-                MaximumWidthRequest="200"
-                FontSize="20"
-                Grid.Row="0"
-                Grid.Column="1"
-            />
-
+                <Label Text="To be XOR'd against: " Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
+            <!-- Entry box for second string-->
+            <Entry
+        x:Name="EntryBox2"
+        Text="686974207468652062756c6c277320657965"
+        Placeholder="Enter second string"
+                VerticalOptions="Center"
+        PlaceholderColor="Gray"
+        WidthRequest="770"
+        HorizontalOptions="Center" 
+                Grid.Row="1"
+                Grid.Column="1"/>
 
             </Grid>
 
 
+
+            <!-- Solution label-->
+            <Button
+            Text="Solution:  "
+            HorizontalOptions="Center"
+            WidthRequest="150"
+                HeightRequest="60"
+            Padding="5"
+            Margin="10"
+            FontSize="18"
+            />
+
+
+            <!-- Grid box for "previous" and "next" challenges-->
+            <Grid ColumnDefinitions="*,*">
+                <Button
+                    Text="Back"
+                    Clicked="OnBackButtonClicked"
+                    HorizontalOptions="End"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="Small"
+                    HeightRequest="60"
+                    Grid.Column="0" />
+
+                <Button
+                    Text="Next"
+                    Clicked="OnNextButtonClicked"
+                    HorizontalOptions="Start"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="20"
+                    Grid.Column="1"
+                    HeightRequest="60" />
+            </Grid>
 
         </VerticalStackLayout>
 
