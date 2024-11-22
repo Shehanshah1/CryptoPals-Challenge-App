@@ -28,6 +28,7 @@ public partial class Challenge5 : ContentPage
         {
             // Get the input stanza and the key
             string input = EntryBox1.Text;
+            string input1 = EntryBox2.Text;
             string key = "ICE"; // Fixed key for this challenge
 
             if (string.IsNullOrEmpty(input))
@@ -39,20 +40,27 @@ public partial class Challenge5 : ContentPage
 
             // Convert input to bytes
             List<byte> plaintextBytes = Encoding.UTF8.GetBytes(input).ToList();
+            List<byte> plaintextBytes1 = Encoding.UTF8.GetBytes(input1).ToList();
 
             // Convert key to bytes
             List<byte> keyBytes = Encoding.UTF8.GetBytes(key).ToList();
+            List<byte> keyBytes1 = Encoding.UTF8.GetBytes(key).ToList();
 
             // Encrypt the input using the repeating-key XOR logic
             List<byte> encryptedBytes = RepeatingKeyXor(plaintextBytes, keyBytes);
+            List<byte> encryptedBytes1 = RepeatingKeyXor(plaintextBytes1, keyBytes1);
 
             // Convert the encrypted bytes to a hex string
             string encryptedHex = BytesToHex(encryptedBytes);
+            string encryptedHex1 = BytesToHex(encryptedBytes1);
 
-                // Display the result
-                SolutionLabel.TextColor = Colors.Green;
+            // Display the result
+            SolutionLabel.TextColor = Colors.Green;
                 SolutionLabel.Text = $"Encrypted (hex): {encryptedHex}";
-           
+
+            SolutionLabel1.TextColor = Colors.Green;
+            SolutionLabel1.Text = $"Encrypted (hex): {encryptedHex1}";
+
         }
         catch (Exception ex)
         {

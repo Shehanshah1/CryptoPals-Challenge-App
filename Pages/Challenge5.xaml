@@ -41,7 +41,7 @@
 
             <Grid ColumnDefinitions=".25*, .75*" RowDefinitions="60,60">
 
-                <Label Text="Stanza: " Grid.Column="0" Grid.Row="0" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
+                <Label Text="First Line: " Grid.Column="0" Grid.Row="0" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
                 <!-- Entry box for first string-->
                 <Entry
             x:Name="EntryBox1"
@@ -52,6 +52,19 @@
                 VerticalOptions="Center"
             HorizontalOptions="Center" 
                 Grid.Row="0"
+                Grid.Column="1"/>
+
+                <Label Text="Second Line: " Grid.Column="0" Grid.Row="1" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
+                <!-- Entry box for first string-->
+                <Entry
+            x:Name="EntryBox2"
+            Text="Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal"
+            Placeholder="Enter first string"
+            PlaceholderColor="Gray"
+            WidthRequest="770"
+                VerticalOptions="Center"
+            HorizontalOptions="Center" 
+                Grid.Row="1"
                 Grid.Column="1"/>
 
             </Grid>
@@ -75,10 +88,19 @@
     Text=""
     FontAttributes="Bold"
     HorizontalOptions="Center"
-    FontSize="Medium"
+    FontSize="Small"
     Margin="10"
     TextColor="Green" />
 
+            <!-- Label to display the solution -->
+            <Label
+    x:Name="SolutionLabel1"
+    Text=""
+    FontAttributes="Bold"
+    HorizontalOptions="Center"
+    FontSize="Small"
+    Margin="10"
+    TextColor="Green" />
 
             <!-- Grid box for "previous" and "next" challenges-->
             <Grid ColumnDefinitions="*,*">
