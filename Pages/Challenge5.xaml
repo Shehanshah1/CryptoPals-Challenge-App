@@ -2,142 +2,109 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Challenge5"
-             Title="Cryptopals Crypto Challenges: Challenge Set 1">
+             Shell.NavBarIsVisible="False"
+             >
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing = "25"
-            Padding = "5,5"
+        <VerticalStackLayout 
+            Spacing="10"
+            Margin="10"
+            Padding="5"
             VerticalOptions="Start">
 
-
-
-            <!--***********************************************-->
             <!-- Description for Challenge #-->
-            <!-- **********************************************-->
             <Label
-                Text="CHALLENGE 5"
-                HorizontalOptions= "Center"
-                Padding="5"
-                FontSize="30"
-            />
+     Text="CHALLENGE 5"
+     FontAttributes="Bold"
+     HorizontalOptions="Center"
+     FontSize="Header"
+     Margin="10" />
 
-            <!--***********************************************-->
             <!-- Name of the Challenge-->
-            <!-- **********************************************-->
             <Label
-                Text="Implement repeating-key XOR"
-                HorizontalOptions="Center"
-                Padding="0"
-                FontSize="25"
-            />
+     Text="Implement repeating-key XOR"
+     HorizontalOptions="Center"
+     FontSize="Large" />
 
-            <!--***********************************************-->
             <!-- Description of the challenge-->
-            <!-- **********************************************-->
             <Label
-                Text="Description: In this challenge we were tasked with encrypting the following stanza"
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="20"
-            />
+     Text="This page takes the following stanza and encrypts it using the key 'ICE'"
+     HorizontalOptions="Center"
+     FontSize="Medium" />
 
-            <!--***********************************************-->
-            <!-- Description of the string -->
-            <!-- **********************************************-->
+            <!-- Instructions for textbox entry-->
             <Label
-                Text="Stanza: Burning 'em, if you ain't quick and nimble /n I go crazy when I hear a cymbal  "
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="16"
-            />
+     Text="To verify the function enter the following string."
+     HorizontalOptions="Center"
+     FontSize="18"
+     Margin="20" />
 
-            <!--***********************************************-->
-            <!-- Description of the challenge-->
-            <!-- **********************************************-->
-            <Label
-                Text="Under the key 'ICE' using a repeating-key XOR"
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="20"
-            />
+            <Grid ColumnDefinitions=".25*, .75*" RowDefinitions="60,60">
 
-            <!--***********************************************-->
-            <!-- instructions for textbox entry-->
-            <!-- **********************************************-->
-            <Label
-                Text="Please paste the previous stanza into the entry box below. "
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="18"
-             />
-
-            <!--***********************************************-->
-            <!-- Entry box for string-->
-            <!-- **********************************************-->
-            <Entry>
-
-            </Entry>
-
-            <!--***********************************************-->
-            <!-- Solution label-->
-            <!-- **********************************************-->
-            <Label
-                Text="Solution:  "
-                HorizontalOptions="Start"
-                Padding="20"
-                Margin="5"
-                FontSize="18"
-            />
-
-            <!--***********************************************-->
-            <!-- Grid box for "previous" and "next" challenges-->
-            <!-- **********************************************-->
-
-            <Grid>
-                <Grid.RowDefinitions>
-
-                    <RowDefinition Height="100"/>
-
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
-
-                </Grid.ColumnDefinitions>
-
-                <Button
-                    Text="Back"
-                    Clicked="OnBackButtonClicked"
-                 HorizontalOptions="Start"
-                 MaximumWidthRequest="250"
-                 FontSize="20"
-                 Grid.Row="0"
-                 Grid.Column="0"
-                />
-
-                <Button
-                    Text="Next"
-                    Clicked="OnNextButtonClicked"
-                 HorizontalOptions="End"
-                 MaximumWidthRequest="200"
-                 FontSize="20"
-                 Grid.Row="0"
-                 Grid.Column="1"
-                />
-
+                <Label Text="Stanza: " Grid.Column="0" Grid.Row="0" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
+                <!-- Entry box for first string-->
+                <Entry
+            x:Name="EntryBox1"
+            Text="Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal"
+            Placeholder="Enter first string"
+            PlaceholderColor="Gray"
+            WidthRequest="770"
+                VerticalOptions="Center"
+            HorizontalOptions="Center" 
+                Grid.Row="0"
+                Grid.Column="1"/>
 
             </Grid>
 
 
 
+            <Button
+    x:Name="SolutionButton"
+    Text="Solve"
+    HorizontalOptions="Center"
+    WidthRequest="150"
+    HeightRequest="60"
+    Padding="5"
+    Margin="10"
+    FontSize="18"
+    Clicked="OnSolutionButtonClicked" />
+
+            <!-- Label to display the solution -->
+            <Label
+    x:Name="SolutionLabel"
+    Text=""
+    FontAttributes="Bold"
+    HorizontalOptions="Center"
+    FontSize="Medium"
+    Margin="10"
+    TextColor="Green" />
+
+
+            <!-- Grid box for "previous" and "next" challenges-->
+            <Grid ColumnDefinitions="*,*">
+                <Button
+                    Text="Back"
+                    Clicked="OnBackButtonClicked"
+                    HorizontalOptions="End"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="Small"
+                    HeightRequest="60"
+                    Grid.Column="0" />
+
+                <Button
+                    Text="Next"
+                    Clicked="OnNextButtonClicked"
+                    HorizontalOptions="Start"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="20"
+                    Grid.Column="1"
+                    HeightRequest="60" />
+            </Grid>
+
         </VerticalStackLayout>
 
     </ScrollView>
+
 </ContentPage>

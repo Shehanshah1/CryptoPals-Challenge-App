@@ -71,16 +71,26 @@
 
 
 
-            <!-- Solution label-->
             <Button
-            Text="Solution:  "
-            HorizontalOptions="Center"
-            WidthRequest="150"
-                HeightRequest="60"
-            Padding="5"
-            Margin="10"
-            FontSize="18"
-            />
+    x:Name="SolutionButton"
+    Text="Solve"
+    HorizontalOptions="Center"
+    WidthRequest="150"
+    HeightRequest="60"
+    Padding="5"
+    Margin="10"
+    FontSize="18"
+    Clicked="OnSolutionButtonClicked" />
+
+            <!-- Label to display the solution -->
+            <Label
+    x:Name="SolutionLabel"
+    Text=""
+    FontAttributes="Bold"
+    HorizontalOptions="Center"
+    FontSize="Medium"
+    Margin="10"
+    TextColor="Green" />
 
 
             <!-- Grid box for "previous" and "next" challenges-->

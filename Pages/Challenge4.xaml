@@ -2,143 +2,82 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Challenge4"
-             Title="Cryptopals Crypto Challenges: Challenge Set 1">
+             Shell.NavBarIsVisible="False">
 
     <ScrollView>
-        <VerticalStackLayout
-         Spacing = "25"
-         Padding = "5,5"
-         VerticalOptions="Start">
+        <VerticalStackLayout 
+            Spacing="10"
+            Margin="10"
+            Padding="5"
+            VerticalOptions="Start">
 
-
-
-            <!--***********************************************-->
-            <!-- Description for Challenge #-->
-            <!-- **********************************************-->
+            <!-- Description for Challenge -->
             <Label
-             Text="CHALLENGE 4"
-             HorizontalOptions= "Center"
-             Padding="5"
-             FontSize="30"
-         />
+                Text="CHALLENGE 4"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Header"
+                Margin="10" />
 
-            <!--***********************************************-->
-            <!-- Name of the Challenge-->
-            <!-- **********************************************-->
             <Label
-             Text="Detect single-character XOR"
-             HorizontalOptions="Center"
-             Padding="0"
-             FontSize="25"
-         />
+                Text="Detect single-character XOR"
+                HorizontalOptions="Center"
+                FontSize="Large" />
 
-            <!--***********************************************-->
-            <!-- Description of the challenge-->
-            <!-- **********************************************-->
             <Label
-             Text="Description: in this challenge we were tasked with finding a 60 character string that has been encrypted by single-byte XOR from the following file."
-             HorizontalOptions="Start"
-             Padding="20"
-             Margin="5"
-             FontSize="20"
-         />
+                Text="This page finds a 60-character string that has been encrypted by single-byte XOR from the specified file."
+                HorizontalOptions="Center"
+                FontSize="Medium" />
 
-            <!--***********************************************-->
-            <!-- Description of the string -->
-            <!-- **********************************************-->
             <Label
-             Text="File:  (need to figure out how to upload file so user can access it)"
-             HorizontalOptions="Start"
-             Padding="20"
-             Margin="5"
-             FontSize="16"
-         />
+                Text="Using the default file 'Challenge4Data.txt'."
+                HorizontalOptions="Center"
+                FontSize="18"
+                Margin="20" />
 
-            <!--***********************************************-->
-            <!-- Description of the challenge-->
-            <!-- **********************************************-->
+
+            <Button
+                x:Name="SolutionButton"
+                Text="Solve"
+                HorizontalOptions="Center"
+                WidthRequest="150"
+                HeightRequest="60"
+                Padding="5"
+                Margin="10"
+                FontSize="18"
+                Clicked="OnSolutionButtonClicked" />
+
             <Label
-             Text="In order to do this we (need more info)."
-             HorizontalOptions="Start"
-             Padding="20"
-             Margin="5"
-             FontSize="20"
-         />
+                x:Name="SolutionLabel"
+                Text=""
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                Margin="10"
+                TextColor="Green" />
 
-            <!--***********************************************-->
-            <!-- instructions for textbox entry-->
-            <!-- **********************************************-->
-            <Label
-             Text="Please paste the previous string into the entry box below. "
-             HorizontalOptions="Start"
-             Padding="20"
-             Margin="5"
-             FontSize="18"
-         />
-
-            <!--***********************************************-->
-            <!-- Entry box for string-->
-            <!-- **********************************************-->
-            <Entry>
-
-            </Entry>
-
-            <!--***********************************************-->
-            <!-- Solution label-->
-            <!-- **********************************************-->
-            <Label
-             Text="Solution:  "
-             HorizontalOptions="Start"
-             Padding="20"
-             Margin="5"
-             FontSize="18"
-         />
-
-            <!--***********************************************-->
-            <!-- Grid box for "previous" and "next" challenges-->
-            <!-- **********************************************-->
-
-            <Grid>
-                <Grid.RowDefinitions>
-
-                    <RowDefinition Height="100"/>
-
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="250"/>
-
-                </Grid.ColumnDefinitions>
-
+            <!-- Navigation Buttons -->
+            <Grid ColumnDefinitions="*,*">
                 <Button
                     Text="Back"
                     Clicked="OnBackButtonClicked"
-                     HorizontalOptions="Start"
-                     MaximumWidthRequest="250"
-                     FontSize="20"
-                     Grid.Row="0"
-                     Grid.Column="0"
-                 />
+                    HorizontalOptions="End"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="Small"
+                    HeightRequest="60"
+                    Grid.Column="0" />
 
                 <Button
                     Text="Next"
                     Clicked="OnNextButtonClicked"
-                     HorizontalOptions="End"
-                     MaximumWidthRequest="200"
-                     FontSize="20"
-                     Grid.Row="0"
-                     Grid.Column="1"
-                  />
-
-
+                    HorizontalOptions="Start"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="20"
+                    Grid.Column="1"
+                    HeightRequest="60" />
             </Grid>
-
-
-
         </VerticalStackLayout>
-
     </ScrollView>
-    
 </ContentPage>
