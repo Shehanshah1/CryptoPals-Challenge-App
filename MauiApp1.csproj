@@ -59,6 +59,8 @@
 	<ItemGroup>
 	  <None Remove="Resources\Files\Challenge4Data.txt" />
 	  <None Remove="Resources\Files\Challenge6Data.txt" />
+	  <None Remove="Resources\Files\Challenge7Data.txt" />
+	  <None Remove="Resources\Files\Challenge8Data.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -67,6 +69,8 @@
 
 	<ItemGroup>
 	  <EmbeddedResource Include="Resources\Files\Challenge4Data.txt" />
+	  <EmbeddedResource Include="Resources\Files\Challenge7Data.txt" />
+	  <EmbeddedResource Include="Resources\Files\Challenge8Data.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
