@@ -2,59 +2,74 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage"
-             Shell.NavBarIsVisible="False">
-            
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#1E1E2E">
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing = "25"
-            Padding = "5"
+            Spacing="20"
+            Padding="20"
             VerticalOptions="Center">
 
+            <!-- App Title -->
             <Label
                 Text="CRYPTOPALS CHALLENGE APPLICATION"
-                FontSize="Header"
+                FontSize="Large"
                 FontAttributes="Bold"
-                HorizontalOptions="Center"/>
-            
-            <!-- Description for Crypto Challenge App-->
-            <Label
-                    Text="Cryptopals Challenges are a collection of exercises that demonstrate attacks on real-world crypto, with a user interface to navigate the challenges and solutions."
-                    HorizontalOptions= "Center"
-                HorizontalTextAlignment="Center"
-                    Padding="5"
-                    FontSize="Small"
-                WidthRequest="860"
-                    />
-            
-            <!-- Description for Challenge Set 1-->
+                HorizontalOptions="Center"
+                TextColor="#FFD700"
+                Padding="10" />
+
+            <!-- Description -->
+            <Frame
+                BackgroundColor="#2E2E3E"
+                CornerRadius="10"
+                Padding="15"
+                Margin="0,10,0,0">
                 <Label
-                    Text="Challenge Set 1 specializes on qualifying."
-                    HorizontalOptions="Center"
-                    Padding="5"
-                    FontSize="Small"
-                    />
+                    Text="Cryptopals Challenges are a collection of exercises that demonstrate attacks on real-world cryptography. Use this app to navigate the challenges and solutions."
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    TextColor="#FFFFFF"
+                    FontSize="Medium" />
+            </Frame>
+
+            <!-- Challenge Set 1 Description -->
+            <Label
+                Text="Challenge Set 1 specializes in qualifying."
+                HorizontalOptions="Center"
+                TextColor="#FFFFFF"
+                FontSize="Medium"
+                Margin="10,5,10,0" />
 
             <Label
-                Text="The exercises in the set are meant to ramp developers into gradually coding cryptography."
+                Text="The exercises in this set are designed to ramp developers into gradually coding cryptography."
+                HorizontalOptions="Center"
+                TextColor="#FFFFFF"
                 FontSize="Small"
-                HorizontalOptions="Center"/>
-            <!-- Instructions to click button-->
-                <Label
-                    Text="Click the button below to continue to Challenge 1"
-                    HorizontalOptions="Center"
-                    Margin="40"
-                    FontSize="30"
-                     />
+                Margin="10,5,10,0"
+                HorizontalTextAlignment="Center" />
 
+            <!-- Instructions -->
+            <Label
+                Text="Click the button below to continue to Challenge 1"
+                HorizontalOptions="Center"
+                TextColor="#FFFFFF"
+                FontSize="Medium"
+                Margin="20,20,20,10"
+                HorizontalTextAlignment="Center" />
 
+            <!-- Start Button -->
             <Button
                 Text="Start"
-                MaximumWidthRequest="200"
-                FontSize="20"
-                Clicked="OnStartButtonClicked"
-                />
-
+                BackgroundColor="#FFD700"
+                TextColor="#1E1E2E"
+                FontSize="Medium"
+                CornerRadius="25"
+                HeightRequest="50"
+                WidthRequest="150"
+                HorizontalOptions="Center"
+                Clicked="OnStartButtonClicked" />
 
         </VerticalStackLayout>
     </ScrollView>

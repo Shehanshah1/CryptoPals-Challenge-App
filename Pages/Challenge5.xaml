@@ -3,106 +3,130 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Challenge5"
              Shell.NavBarIsVisible="False"
-             >
+             BackgroundColor="#1E1E2E">
 
     <ScrollView>
         <VerticalStackLayout 
-            Spacing="10"
-            Margin="10"
-            Padding="5"
+            Spacing="15"
+            Margin="20"
+            Padding="10"
             VerticalOptions="Start">
 
-            <!-- Description for Challenge #-->
+            <!-- Challenge Header -->
             <Label
-     Text="CHALLENGE 5"
-     FontAttributes="Bold"
-     HorizontalOptions="Center"
-     FontSize="Header"
-     Margin="10" />
+                Text="CHALLENGE 5"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Title"
+                Margin="10"
+                TextColor="#FFD700" />
 
-            <!-- Name of the Challenge-->
+            <!-- Challenge Name -->
             <Label
-     Text="Implement repeating-key XOR"
-     HorizontalOptions="Center"
-     FontSize="Large" />
+                Text="Implement Repeating-Key XOR"
+                HorizontalOptions="Center"
+                FontSize="Large"
+                TextColor="White" />
 
-            <!-- Description of the challenge-->
+            <!-- Challenge Description -->
             <Label
-     Text="This page takes the following stanza and encrypts it using the key 'ICE'"
-     HorizontalOptions="Center"
-     FontSize="Medium" />
+                Text="This page takes the following stanza and encrypts it using the key 'ICE'."
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="LightGray" />
 
-            <!-- Instructions for textbox entry-->
+            <!-- Instructions -->
             <Label
-     Text="To verify the function enter the following string."
-     HorizontalOptions="Center"
-     FontSize="18"
-     Margin="20" />
+                Text="To verify the function, enter the following string:"
+                HorizontalOptions="Center"
+                FontSize="18"
+                Margin="20"
+                TextColor="LightGray" />
 
-            <Grid ColumnDefinitions=".25*, .75*" RowDefinitions="60,60">
-
-                <Label Text="First Line: " Grid.Column="0" Grid.Row="0" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
-                <!-- Entry box for first string-->
+            <!-- Grid for Inputs -->
+            <Grid ColumnDefinitions=".25*, .75*" RowDefinitions="60,60" Padding="5">
+                <!-- First Line -->
+                <Label 
+                    Text="First Line:" 
+                    Grid.Column="0" 
+                    Grid.Row="0" 
+                    Margin="5"  
+                    HorizontalOptions="Center" 
+                    FontSize="Small" 
+                    VerticalOptions="Center" 
+                    TextColor="#FFD700" />
                 <Entry
-            x:Name="EntryBox1"
-            Text="Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal"
-            Placeholder="Enter first string"
-            PlaceholderColor="Gray"
-            WidthRequest="770"
-                VerticalOptions="Center"
-            HorizontalOptions="Center" 
-                Grid.Row="0"
-                Grid.Column="1"/>
+                    x:Name="EntryBox1"
+                    Text="Burning 'em, if you ain't quick and nimble"
+                    Placeholder="Enter first string"
+                    PlaceholderColor="Gray"
+                    WidthRequest="770"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="#2A2B3A"
+                    TextColor="White" />
 
-                <Label Text="Second Line: " Grid.Column="0" Grid.Row="1" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
-                <!-- Entry box for first string-->
+                <!-- Second Line -->
+                <Label 
+                    Text="Second Line:" 
+                    Grid.Column="0" 
+                    Grid.Row="1" 
+                    Margin="5"  
+                    HorizontalOptions="Center" 
+                    FontSize="Small" 
+                    VerticalOptions="Center" 
+                    TextColor="#FFD700" />
                 <Entry
-            x:Name="EntryBox2"
-            Text="Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal"
-            Placeholder="Enter first string"
-            PlaceholderColor="Gray"
-            WidthRequest="770"
-                VerticalOptions="Center"
-            HorizontalOptions="Center" 
-                Grid.Row="1"
-                Grid.Column="1"/>
-
+                    x:Name="EntryBox2"
+                    Text="I go crazy when I hear a cymbal"
+                    Placeholder="Enter second string"
+                    PlaceholderColor="Gray"
+                    WidthRequest="770"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="#2A2B3A"
+                    TextColor="White" />
             </Grid>
 
-
-
+            <!-- Solve Button -->
             <Button
-    x:Name="SolutionButton"
-    Text="Solve"
-    HorizontalOptions="Center"
-    WidthRequest="150"
-    HeightRequest="60"
-    Padding="5"
-    Margin="10"
-    FontSize="18"
-    Clicked="OnSolutionButtonClicked" />
+                x:Name="SolutionButton"
+                Text="Solve"
+                HorizontalOptions="Center"
+                WidthRequest="150"
+                HeightRequest="60"
+                Padding="5"
+                Margin="15"
+                FontSize="18"
+                BackgroundColor="#FFD700"
+                TextColor="#1E1E2E"
+                CornerRadius="10"
+                Clicked="OnSolutionButtonClicked" />
 
-            <!-- Label to display the solution -->
+            <!-- Solution Display -->
             <Label
-    x:Name="SolutionLabel"
-    Text=""
-    FontAttributes="Bold"
-    HorizontalOptions="Center"
-    FontSize="Small"
-    Margin="10"
-    TextColor="Green" />
+                x:Name="SolutionLabel"
+                Text=""
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Small"
+                Margin="10"
+                TextColor="#50FA7B" />
 
-            <!-- Label to display the solution -->
             <Label
-    x:Name="SolutionLabel1"
-    Text=""
-    FontAttributes="Bold"
-    HorizontalOptions="Center"
-    FontSize="Small"
-    Margin="10"
-    TextColor="Green" />
+                x:Name="SolutionLabel1"
+                Text=""
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Small"
+                Margin="10"
+                TextColor="#50FA7B" />
 
-            <!-- Grid box for "previous" and "next" challenges-->
+            <!-- Navigation Buttons -->
             <Grid ColumnDefinitions="*,*">
                 <Button
                     Text="Back"
@@ -112,6 +136,9 @@
                     WidthRequest="150"
                     FontSize="Small"
                     HeightRequest="60"
+                    BackgroundColor="#333644"
+                    TextColor="#FFD700"
+                    CornerRadius="8"
                     Grid.Column="0" />
 
                 <Button
@@ -120,13 +147,14 @@
                     HorizontalOptions="Start"
                     Margin="10"
                     WidthRequest="150"
-                    FontSize="20"
-                    Grid.Column="1"
-                    HeightRequest="60" />
+                    FontSize="Small"
+                    HeightRequest="60"
+                    BackgroundColor="#333644"
+                    TextColor="#FFD700"
+                    CornerRadius="8"
+                    Grid.Column="1" />
             </Grid>
 
         </VerticalStackLayout>
-
     </ScrollView>
-
 </ContentPage>

@@ -2,91 +2,123 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Challenge1"
-             Title=""
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#1E1E2E">
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="10"
-            Margin="10"
-            Padding="5"
+            Spacing="20"
+            Margin="20"
+            Padding="10"
             VerticalOptions="Start">
 
-            <!-- Description for Challenge #-->
+            <!-- Challenge Title -->
             <Label
                 Text="CHALLENGE 1"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                FontSize="Header"
+                FontSize="Title"
+                TextColor="#FFD700"
                 Margin="10" />
 
-            <!-- Name of the Challenge-->
+            <!-- Challenge Name -->
             <Label
                 Text="Convert HEX to Base64"
                 HorizontalOptions="Center"
-                FontSize="Large" />
+                FontSize="Large"
+                TextColor="#FFFFFF"
+                Margin="5" />
 
-            <!-- Description of the challenge-->
+            <!-- Challenge Description -->
             <Label
-                Text="This page converts HEX encoded string into Base 64."
+                Text="This page converts a HEX-encoded string into Base64."
                 HorizontalOptions="Center"
-                FontSize="Medium" />
+                FontSize="Medium"
+                TextColor="#C0C0C0"
+                Margin="10" />
 
-            <!-- Instructions for textbox entry-->
-            <Label
-                Text="Clicking the SOLVE Button would change the code from HEX to Base 64:"
-                HorizontalOptions="Center"
-                FontSize="18"
-                Margin="20" />
+            <!-- Instructions -->
+            <Frame
+                BackgroundColor="#2E2E3E"
+                CornerRadius="10"
+                Padding="15"
+                Margin="0,10,0,0">
+                <Label
+                    Text="Click the SOLVE button below to convert the HEX string into Base64."
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Medium"
+                    TextColor="#FFFFFF" />
+            </Frame>
 
-            <!-- Entry box for string-->
+            <!-- Entry Box -->
             <Entry
                 x:Name="EntryBox"
                 Text="49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d"
                 Placeholder="Enter HEX string"
-                PlaceholderColor="Gray"
+                PlaceholderColor="#A9A9A9"
+                BackgroundColor="#2E2E3E"
+                TextColor="#FFFFFF"
+                FontSize="Medium"
                 WidthRequest="770"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                Margin="10"
+                 />
 
-            <!-- Solve Button-->
+            <!-- Solve Button -->
             <Button
                 Text="Solve"
-                Margin="10"
-                HorizontalOptions="Center"
+                BackgroundColor="#FFD700"
+                TextColor="#1E1E2E"
+                FontSize="Medium"
+                CornerRadius="25"
                 WidthRequest="150"
-                Clicked="OnSolveButtonClicked"
-                FontSize="Medium" />
-
-            <!-- Answer label-->
-            <Label
-                x:Name="AnswerLabel"
-                Text=""
-                Margin="10"
+                HeightRequest="50"
                 HorizontalOptions="Center"
-                FontSize="Large" />
+                Margin="10"
+                Clicked="OnSolveButtonClicked" />
 
-            <!-- Grid box for "previous" and "next" challenges-->
-            <Grid ColumnDefinitions="*,*">
+            <!-- Answer Label -->
+            <Frame
+                BackgroundColor="#2E2E3E"
+                CornerRadius="10"
+                Padding="10"
+                Margin="0,10,0,0">
+                <Label
+                    x:Name="AnswerLabel"
+                    Text=""
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    TextColor="#FFD700"
+                    HorizontalTextAlignment="Center" />
+            </Frame>
+
+            <!-- Navigation Buttons -->
+            <Grid ColumnDefinitions="*,*"
+                  Margin="10">
                 <Button
                     Text="Back"
-                    Clicked="OnBackButtonClicked"
-                    HorizontalOptions="End"
-                    Margin="10"
+                    BackgroundColor="#2E2E3E"
+                    TextColor="#FFD700"
+                    FontSize="Medium"
+                    CornerRadius="25"
                     WidthRequest="150"
-                    FontSize="Small"
-                    HeightRequest="60"
+                    HeightRequest="50"
+                    Clicked="OnBackButtonClicked"
                     Grid.Column="0" />
 
                 <Button
                     Text="Next"
-                    Clicked="OnNextButtonClicked"
-                    HorizontalOptions="Start"
-                    Margin="10"
+                    BackgroundColor="#FFD700"
+                    TextColor="#1E1E2E"
+                    FontSize="Medium"
+                    CornerRadius="25"
                     WidthRequest="150"
-                    FontSize="20"
-                    Grid.Column="1"
-                    HeightRequest="60" />
+                    HeightRequest="50"
+                    Clicked="OnNextButtonClicked"
+                    Grid.Column="1" />
             </Grid>
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

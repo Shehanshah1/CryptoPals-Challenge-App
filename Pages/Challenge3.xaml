@@ -3,114 +3,125 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Challenge3"
              Shell.NavBarIsVisible="False"
-             >
+             BackgroundColor="#1E1E2E">
 
     <ScrollView>
         <VerticalStackLayout 
-            Spacing="10"
-            Margin="10"
-            Padding="5"
+            Spacing="15"
+            Margin="15"
+            Padding="10"
             VerticalOptions="Start">
 
             <!-- Description for Challenge #-->
             <Label
-     Text="CHALLENGE 3"
-     FontAttributes="Bold"
-     HorizontalOptions="Center"
-     FontSize="Header"
-     Margin="10" />
+                Text="CHALLENGE 3"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Title"
+                Margin="10"
+                TextColor="#FFD700" />
 
             <!-- Name of the Challenge-->
             <Label
-     Text="Single Byte XOR-Cypher"
-     HorizontalOptions="Center"
-     FontSize="Large" />
+                Text="Single Byte XOR-Cypher"
+                HorizontalOptions="Center"
+                FontSize="Large"
+                TextColor="White" />
 
             <!-- Description of the challenge-->
             <Label
-     Text="This page finds a key to decrypt the following hex encoded string"
-     HorizontalOptions="Center"
-     FontSize="Medium" />
-    
-
-
-            
-            <!-- Description of the challenge-->
-            <Label
-                Text="In order to do this we devised a methd to 'score' a piece of english plain text."
+                Text="This page finds a key to decrypt the following hex-encoded string."
                 HorizontalOptions="Center"
                 FontSize="Medium"
-            />
+                TextColor="LightGray" />
 
-           
+            <!-- Instruction for the challenge-->
+            <Label
+                Text="In order to do this, we devised a method to 'score' a piece of English plain text."
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="LightGray"
+                Margin="5" />
 
-            <Grid ColumnDefinitions=".25*, .75*" RowDefinitions="60,60">
+            <Grid ColumnDefinitions=".25*, .75*" RowDefinitions="60">
+                <Label 
+                    Text="Hex String: " 
+                    Grid.Column="0" 
+                    Grid.Row="0" 
+                    Margin="5"  
+                    HorizontalOptions="End" 
+                    FontSize="Small" 
+                    VerticalOptions="Center" 
+                    TextColor="#FFD700" />
 
-                <Label Text="First String: " Grid.Column="0" Grid.Row="0" Margin="5"  HorizontalOptions="Center" FontSize="Small" VerticalOptions="Center"/>
-                
-                
-                <!-- Entry box for first string-->
+                <!-- Entry box for the hex string -->
                 <Entry
-       x:Name="EntryBox1"
-       Text="1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
-       Placeholder="Hex Encoded String:"
-       PlaceholderColor="Gray"
-       WidthRequest="770"
-           VerticalOptions="Center"
-       HorizontalOptions="Center" 
-           Grid.Row="0"
-           Grid.Column="1"/>
-
+                    x:Name="EntryBox1"
+                    Text="1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
+                    Placeholder="Enter hex-encoded string"
+                    PlaceholderColor="Gray"
+                    WidthRequest="770"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    TextColor="White"
+                    BackgroundColor="#333644"
+                    FontSize="Medium" />
             </Grid>
 
-      <Button
-   Text="Solution"
-   Clicked="OnSolutionButtonClicked"
-   HorizontalOptions="Center"
-   WidthRequest="150"
-   HeightRequest="60"
-   Padding="5"
-   Margin="10"
-   FontSize="18"
-/>
+            <Button
+                Text="Solve"
+                Clicked="OnSolutionButtonClicked"
+                HorizontalOptions="Center"
+                WidthRequest="150"
+                HeightRequest="60"
+                Padding="5"
+                Margin="10"
+                FontSize="18"
+                TextColor="Black"
+                BackgroundColor="#FFD700"
+                CornerRadius="8"/>
+
             <!-- Label to display the solution -->
             <Label
-    x:Name="SolutionLabel"
-    Text=""
-    FontAttributes="Bold"
-    HorizontalOptions="Center"
-    FontSize="Medium"
-    Margin="10"
-    TextColor="Green" />
+                x:Name="SolutionLabel"
+                Text=""
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                Margin="10"
+                TextColor="#50FA7B" />
 
-
-
-            <!-- Grid box for "previous" and "next" challenges-->
+            <!-- Grid box for "previous" and "next" challenges -->
             <Grid ColumnDefinitions="*,*">
                 <Button
-               Text="Back"
-               Clicked="OnBackButtonClicked"
-               HorizontalOptions="End"
-               Margin="10"
-               WidthRequest="150"
-               FontSize="Small"
-               HeightRequest="60"
-               Grid.Column="0" />
+                    Text="Back"
+                    Clicked="OnBackButtonClicked"
+                    HorizontalOptions="End"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="Small"
+                    HeightRequest="60"
+                    BackgroundColor="#333644"
+                    TextColor="#FFD700"
+                    CornerRadius="8"
+                    Grid.Column="0" />
 
                 <Button
-               Text="Next"
-               Clicked="OnNextButtonClicked"
-               HorizontalOptions="Start"
-               Margin="10"
-               WidthRequest="150"
-               FontSize="20"
-               Grid.Column="1"
-               HeightRequest="60" />
+                    Text="Next"
+                    Clicked="OnNextButtonClicked"
+                    HorizontalOptions="Start"
+                    Margin="10"
+                    WidthRequest="150"
+                    FontSize="Small"
+                    HeightRequest="60"
+                    BackgroundColor="#333644"
+                    TextColor="#FFD700"
+                    CornerRadius="8"
+                    Grid.Column="1" />
             </Grid>
 
         </VerticalStackLayout>
-
-
     </ScrollView>
-
 </ContentPage>

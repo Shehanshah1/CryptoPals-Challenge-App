@@ -2,40 +2,56 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Challenge8"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#1E1E2E">
 
     <ScrollView>
         <VerticalStackLayout 
-            Spacing="10"
-            Margin="10"
-            Padding="5"
+            Spacing="15"
+            Margin="20"
+            Padding="10"
             VerticalOptions="Start">
 
-            <!-- Description for Challenge -->
+            <!-- Header -->
             <Label
                 Text="CHALLENGE 8"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                FontSize="Header"
-                Margin="10" />
+                FontSize="Title"
+                Margin="10"
+                TextColor="#FFD700" />
 
+            <!-- Challenge Title -->
             <Label
-                Text="Detect AES in ECB mode"
+                Text="Detect AES in ECB Mode"
                 HorizontalOptions="Center"
-                FontSize="Large" />
+                FontSize="Large"
+                TextColor="White" />
 
+            <!-- Description -->
             <Label
                 Text="This page detects a bunch of hex-encoded ciphertexts in the given file."
                 HorizontalOptions="Center"
-                FontSize="Medium" />
+                FontSize="Medium"
+                TextColor="LightGray"
+                Margin="10" />
 
-            <Label
-                Text="Using the default file 'Challenge7Data.txt'."
-                HorizontalOptions="Center"
-                FontSize="18"
-                Margin="20" />
-
-
+            <!-- File Information Section -->
+            <Frame
+                BorderColor="#FFD700"
+                BackgroundColor="#2A2B3A"
+                CornerRadius="8"
+                HeightRequest="60"
+                Padding="15"
+                Margin="10">
+                <Label
+                    Text="Using the default file 'Challenge8Data.txt'."
+                    HorizontalOptions="Center"
+                    FontSize="18"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Frame>
+            <!-- Solve Button -->
             <Button
                 x:Name="SolutionButton"
                 Text="Solve"
@@ -43,40 +59,50 @@
                 WidthRequest="150"
                 HeightRequest="60"
                 Padding="5"
-                Margin="10"
+                Margin="15"
                 FontSize="18"
+                BackgroundColor="#FFD700"
+                TextColor="#1E1E2E"
+                CornerRadius="10"
                 Clicked="OnSolutionButtonClicked" />
 
+            <!-- Solution Display -->
             <Label
                 x:Name="SolutionLabel"
                 Text=""
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                FontSize="Medium"
+                FontSize="Micro"
                 Margin="10"
-                TextColor="Green" />
+                TextColor="#50FA7B" />
 
             <!-- Navigation Buttons -->
-            <Grid ColumnDefinitions="*,*">
+            <Grid ColumnDefinitions="*,*" Margin="10">
                 <Button
                     Text="Back"
                     Clicked="OnBackButtonClicked"
                     HorizontalOptions="End"
-                    Margin="10"
                     WidthRequest="150"
                     FontSize="Small"
                     HeightRequest="60"
+                    BackgroundColor="#333644"
+                    TextColor="#FFD700"
+                    CornerRadius="8"
+                    Margin="10"
                     Grid.Column="0" />
 
                 <Button
                     Text="Next"
                     Clicked="OnNextButtonClicked"
                     HorizontalOptions="Start"
-                    Margin="10"
                     WidthRequest="150"
-                    FontSize="20"
-                    Grid.Column="1"
-                    HeightRequest="60" />
+                    FontSize="Small"
+                    HeightRequest="60"
+                    BackgroundColor="#333644"
+                    TextColor="#FFD700"
+                    CornerRadius="8"
+                    Margin="10"
+                    Grid.Column="1" />
             </Grid>
         </VerticalStackLayout>
     </ScrollView>
